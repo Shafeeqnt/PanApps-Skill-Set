@@ -46,7 +46,8 @@ $template = $template.Replace("{{SKILL_NAME}}", $skillName)
 $template = $template.Replace("{{FRAMEWORK}}", $framework)
 $template = $template.Replace("{{FRAMEWORK_TITLE}}", $frameworkTitle)
 
-$projectRoot = Split-Path -Parent $scriptRoot
+$repoRoot = Split-Path -Parent $scriptRoot
+$projectRoot = Split-Path -Parent $repoRoot
 $targetDir = Join-Path $projectRoot ".claude\skills\$skillName"
 $targetFile = Join-Path $targetDir "SKILL.md"
 
